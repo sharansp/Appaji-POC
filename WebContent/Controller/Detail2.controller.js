@@ -10,7 +10,6 @@ sap.ui.controller("com.test.Controller.Detail2", {
 		oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
 	},
 	_onObjectMatched: function(oEvent){
-		debugger;
 		var that=this;
 			if(oEvent==undefined){
 				var model=sap.ui.getCore().getModel();
@@ -67,7 +66,6 @@ sap.ui.controller("com.test.Controller.Detail2", {
 			}
 			
 			if(val == 0){
-				debugger;
 				length=modelData.SalesOrder[val].drill.length;
 				var i=0,tile="";
 				tile = new sap.m.FormattedText ({
@@ -80,39 +78,10 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				var vbox = new sap.m.VBox();
 				vbox.addItem(tile);
 				page.addContent(vbox);
-				//if(length && modelData.SalesOrder[val].drill[i].theory != undefined){
-					//for(i;i<length;i++){
-							/*tile=new sap.m.GenericTile({
-								header:modelData.SalesOrder[val].drill[i].theory,
-								press:function(evt){
-									var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
-									var obj = {
-											key1 : modelData.SalesOrder[0].key
-									}
-									oRouter.navTo("Questions",
-										{obj1:modelData.SalesOrder[0].key,
-										 obj2: evt.getSource().getHeader()
-										}
-									);
-								},
-								tileContent:{
-									unit:"",
-									
-								},
-								headerImage:"sap-icon://"+modelData.SalesOrder[val].drill[i].icon,
-								backgroundImage:"Images/"+Math.floor(Math.random()*30)+".jpg"
-								
-							
-							});*/
-							//tile.addStyleClass("tileClass");
-							//page.addContent(tile);
-						//}
-					//}
+				
 			}
 			
 			else if(val=="2"){
-				
-				
 				
 				var oTable = new sap.m.Table({   
 				      inset : true, 
@@ -128,9 +97,6 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				    var col2 = new sap.m.Column({header: new sap.m.Label({text:"Address"})});
 				    oTable.addColumn(col2); 
 				    
-//				    var col3 = new sap.m.Column("col3",{header: new sap.m.Label({text:"Price"})});
-//				    oTable.addColumn(col3);    
-				    
 				    var colItems = new sap.m.ColumnListItem({type:"Active"});
 				    oTable.bindAggregation("items","/",colItems);
 				    
@@ -140,23 +106,49 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				    var txtNAME2 = new sap.m.Text({text:"{Mutt_Address}"});
 				    colItems.addCell(txtNAME2); 
 				       
-//				    var txtNAME3 = new sap.m.Text("txtNAME3",{text:"{UnitsInStock}"});
-//				    colItems.addCell(txtNAME3);
-				    
-				    
-				/*var oTable = new sap.ui.table.TreeTable("idTreeTable",{
-					rows:"{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}",
-	                    selectionMode:"MultiToggle",
-	                    enableSelectAll:false,
-	                    ariaLabelledBy:"title"
-				});*/
-				
+
 				var oModel = new sap.ui.model.json.JSONModel( );
 				oModel.setData(oModel.loadData("json/Mutts.json"));
 				oModel.refresh();
 				oTable.setModel(oModel);
 				//oTable.addItem(tile);
 				page.addContent(oTable);
+			}
+			
+				else if(val=="5"){
+				
+					var html1 = new sap.ui.core.HTML({
+		                content:
+		                       
+		                        
+		                        "<iframe width='420' height='345' src='https://www.youtube.com/embed/JxBqVgLJyqk'></iframe>"+
+		                        "<iframe width='420' height='345' src='https://www.youtube.com/embed/-vQfO_2yzco'></iframe>"
+		                	
+		                	
+			
+
+		        });
+				    //Create a panel instance
+				var oPanel = new sap.m.Panel();
+				//Add something to the panel's content area
+				oPanel.addContent(html1);
+				//Attach the panel to the page
+				//oPanel.placeAt("content");
+				page.addContent(oPanel);
+			}
+			
+			
+			else{
+				
+				var i=0,tile="";
+				tile = new sap.m.FormattedText ({
+					htmlText: "<h3 style=\"color:green; font-weight:600;\">Yet To Be Implemented</h3>"
+				})
+				
+				var vbox = new sap.m.VBox();
+				vbox.addItem(tile);
+				page.addContent(vbox);
+				
 			}
 			
 			}
