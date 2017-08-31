@@ -81,6 +81,59 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				
 			}
 			
+			if(val == 1){
+				var oModel = new sap.ui.model.json.JSONModel( );
+				//oModel.loadData("json/test.json");
+				oModel.setData(oModel.loadData("json/Jagadgurus.json"),"model");
+				modelData = oModel.getData();
+				
+				oModel.attachRequestCompleted(function(){
+					console.log(oModel.getData());
+//					that.getView().setModel(oModel);
+//					sap.ui.getCore().setModel(oModel);
+//					 var id1=that.getView().byId('idListCourse');
+//					id1.setSelectedItem(id1.getItems()[0]);
+//					var view=that.getView().byId('detail').getController();
+//					view._onObjectMatched();
+//					var fragmentName  = "com.test.fragments.JagadguruView";
+//					 oFragment = sap.ui.xmlfragment(fragmentName);
+//					 oFragment.setModel(oModel);
+					var oNewsContent = new sap.m.NewsContent({contentText:"Test1"});
+					 var modelData = oModel.getData();
+					var length =  oModel.getData().length;
+					var i=0;
+					for(i;i<length;i++){
+						tile=new sap.m.GenericTile({
+							header:modelData[i].name,
+							frameType:"TwoByOne",
+							backgroundImage:modelData[i].backgroundImage,
+							press:function(evt){
+								alert("?");
+							},
+							tileContent:{
+								unit:"12",
+								//content:oNewsContent
+								
+							}
+						});
+						tile.addStyleClass("tileClass");
+						page.addContent(tile);
+					}
+					
+					// page.addContent(oFragment);
+					
+					
+				});
+				
+				
+				 
+				 
+				
+				
+				
+				
+			}
+			
 			else if(val=="2"){
 				
 				var oTable = new sap.m.Table({   
@@ -97,6 +150,9 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				    var col2 = new sap.m.Column({header: new sap.m.Label({text:"Address"})});
 				    oTable.addColumn(col2); 
 				    
+				    var col3 = new sap.m.Column({header: new sap.m.Label({text:"Contacts"})});
+				    oTable.addColumn(col3); 
+				    
 				    var colItems = new sap.m.ColumnListItem({type:"Active"});
 				    oTable.bindAggregation("items","/",colItems);
 				    
@@ -104,7 +160,10 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				    colItems.addCell(txtNAME); 
 				        
 				    var txtNAME2 = new sap.m.Text({text:"{Mutt_Address}"});
-				    colItems.addCell(txtNAME2); 
+				    colItems.addCell(txtNAME2);
+				    
+				    var ContactsText = new sap.m.Text({text:"{Contacts}"});
+				    colItems.addCell(ContactsText);
 				       
 
 				var oModel = new sap.ui.model.json.JSONModel( );

@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:unified="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+	<List
+		headerText="Jagadgurus"
+		items="{
+			path: '/'
+		}" >
+			<StandardListItem
+			title="{name}"
+			counter="{Quantity}"/>
+	 
+			
+	</List>
+	
+	
+	
+	</VBox>
+</core:FragmentDefinition>
