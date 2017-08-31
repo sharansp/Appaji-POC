@@ -114,6 +114,32 @@ sap.ui.controller("com.test.Controller.Detail2", {
 				//oTable.addItem(tile);
 				page.addContent(oTable);
 			}
+			else if(val=="3"){
+				
+				
+				//alert("Create Planning calender!");
+				var fragmentName  = "com.test.fragments.CalenderPlanning";
+				 oFragment = sap.ui.xmlfragment(fragmentName);
+				 page.addContent(oFragment);
+				/*var html1 = new sap.ui.core.HTML({
+	                content:
+	                       
+	                        
+	                        "<iframe width='420' height='345' src='https://www.youtube.com/embed/JxBqVgLJyqk'></iframe>"+
+	                        "<iframe width='420' height='345' src='https://www.youtube.com/embed/-vQfO_2yzco'></iframe>"
+	                	
+	                	
+		
+
+	        });
+			    //Create a panel instance
+			var oPanel = new sap.m.Panel();
+			//Add something to the panel's content area
+			oPanel.addContent(html1);
+			//Attach the panel to the page
+			//oPanel.placeAt("content");
+			page.addContent(oPanel);*/
+		}
 			
 				else if(val=="5"){
 				
