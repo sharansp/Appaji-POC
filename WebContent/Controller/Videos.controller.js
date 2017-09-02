@@ -1,4 +1,4 @@
-sap.ui.controller("com.test.Controller.Events", {
+sap.ui.controller("com.test.Controller.Videos", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -6,18 +6,18 @@ sap.ui.controller("com.test.Controller.Events", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
-		var page = this.oView.byId("idEventsDetailView");
+		alert('c.controller.js');
+		/*var page = this.oView.byId("idGalleryDetailView");
 		var i=0,tile="";
 		tile = new sap.m.FormattedText ({
-			htmlText: "<h3 style=\"color:green; font-weight:600;\">Events</h3>"
+			htmlText: "<h3 style=\"color:red; font-weight:600;\">Gallery</h3>"
 		})
 		
 		var vbox = new sap.m.VBox();
 		vbox.addItem(tile);
-		page.addContent(vbox);
-		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
+		page.addContent(vbox);*/
 	},
+	
 	
 		
 	

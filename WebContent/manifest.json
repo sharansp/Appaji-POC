@@ -12,7 +12,7 @@
       "_version":"1.1.0",
       "rootView":"com.test.View.App",
       "dependencies":{  
-         "minUI5Version":"1.30",
+         "minUI5Version":"1.40",
          "libs":{  
             "sap.m":{  
 
@@ -62,7 +62,12 @@
                "pattern":"Games",
                "name":"Games",
                "target":"Games"
-            }
+            },
+            {  
+               "pattern":"VideosHTML",
+               "name":"VideosHTML",
+               "target":"VideosHTML"
+            }            
          ],
          "targets":{  
             "overview":{  
@@ -84,6 +89,11 @@
             "Games":{  
                "viewName":"Games",
                "transition":"flip"
+            },
+            "VideosHTML":{  
+               "viewName":"VideosHTML",
+               "transition":"flip",
+               "viewType": "HTML"
             }
          }
       }

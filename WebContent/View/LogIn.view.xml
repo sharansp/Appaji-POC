@@ -38,7 +38,7 @@
 					
 					<!-- 7 Contacts View -->
 						<mvc:XMLView id="detailContacts" viewName="com.test.View.Contacts" />
-					<!-- Gallery View Ends -->
+					<!-- Contacts View Ends -->
 					
 				</detailPages>
 			<masterPages>
@@ -50,7 +50,7 @@
 							<StandardListItem title="Divya Shaktiya Bhavya Parampare" type="Active" custom:to="detailDivyaShakti"/>
 							<StandardListItem title="Mutts" type="Active" custom:to="detailMutts"/>
 							<StandardListItem title="Events" type="Active" custom:to="detailEvents"/>
-							<StandardListItem title="Blogs" type="Active" custom:to="detailDetailBlogs"/>
+							<StandardListItem title="Blogs" type="Active" custom:to="detailBlogs"/>
 							<StandardListItem title="Gallery" type="Active" custom:to="detailGallery"/>
 							<StandardListItem title="Contacts" type="Active" custom:to="detailContacts"/>
 							
