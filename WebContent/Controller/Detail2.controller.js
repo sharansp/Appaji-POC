@@ -83,21 +83,11 @@ sap.ui.controller("com.test.Controller.Detail2", {
 			
 			if(val == 1){
 				var oModel = new sap.ui.model.json.JSONModel( );
-				//oModel.loadData("json/test.json");
 				oModel.setData(oModel.loadData("json/Jagadgurus.json"),"model");
 				modelData = oModel.getData();
 				
 				oModel.attachRequestCompleted(function(){
 					console.log(oModel.getData());
-//					that.getView().setModel(oModel);
-//					sap.ui.getCore().setModel(oModel);
-//					 var id1=that.getView().byId('idListCourse');
-//					id1.setSelectedItem(id1.getItems()[0]);
-//					var view=that.getView().byId('detail').getController();
-//					view._onObjectMatched();
-//					var fragmentName  = "com.test.fragments.JagadguruView";
-//					 oFragment = sap.ui.xmlfragment(fragmentName);
-//					 oFragment.setModel(oModel);
 					var oNewsContent = new sap.m.NewsContent({contentText:"Test1"});
 					 var modelData = oModel.getData();
 					var length =  oModel.getData().length;

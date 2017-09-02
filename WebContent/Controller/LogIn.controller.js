@@ -6,7 +6,7 @@ sap.ui.controller("com.test.Controller.LogIn", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf View.LogIn
 */
-	onInit: function() {
+	onInit: function() {/*
 		//setInterval(this.onPressChangeBG,10000);
 		//alert("in login controller");
 //		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -47,7 +47,7 @@ sap.ui.controller("com.test.Controller.LogIn", {
 
 		           id.setModel(oModel);
 		           id.bindAggregation("items", "/SalesOrder", oItemSelectTemplate);
-				oModel.refresh();
+				oModel.refresh();*/
 	},
 	
 	onPressChangeBG: function(){
@@ -151,6 +151,43 @@ sap.ui.controller("com.test.Controller.LogIn", {
 
 			// call it
 			work();
+	},
+	
+	onPressNavToDetail : function(oEvent) {
+		this.getSplitAppObj().to(this.createId("detailDetail"));
+	},
+
+	onPressDetailBack : function() {
+		this.getSplitAppObj().backDetail();
+	},
+
+	onPressMasterBack : function() {
+		this.getSplitAppObj().backMaster();
+	},
+
+	onPressGoToMaster : function() {
+		this.getSplitAppObj().toMaster(this.createId("master2"));
+	},
+
+	onListItemPress : function(oEvent) {
+		var sToPageId = oEvent.getParameter("listItem").getCustomData()[0].getValue();
+
+		this.getSplitAppObj().toDetail(this.createId(sToPageId));
+	},
+
+	onPressModeBtn : function(oEvent) {
+		var sSplitAppMode = oEvent.getSource().getSelectedButton().getCustomData()[0].getValue();
+
+		this.getSplitAppObj().setMode(sSplitAppMode);
+		MessageToast.show("Split Container mode is changed to: " + sSplitAppMode, {duration: 5000});
+	},
+
+	getSplitAppObj : function() {
+		var result = this.byId("SplitAppDemo");
+		if (!result) {
+			jQuery.sap.log.info("SplitApp object can't be found");
+		}
+		return result;
 	},
 
 /**

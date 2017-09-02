@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 		controllerName="com.test.Controller.Detail2" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page id="dd">
+	<Page id="dd1">
 		<content>
 	 
 	</content>

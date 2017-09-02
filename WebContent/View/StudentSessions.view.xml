@@ -2,7 +2,7 @@
 		controllerName="com.test.Controller.StudentSessions" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Welcome to Mugalkhod Appaji App" showNavButton="true" navButtonPress="onPressStudentDetailsBack">
 		<content>
-			<SplitApp initialDetail="detail" initialMaster="master" >
+			<SplitApp id="idSplitApp" initialDetail="detail" initialMaster="master" >
 				<detailPages>
 					<mvc:XMLView viewName="com.test.View.folder.Detail2" id="detail">
                   </mvc:XMLView>

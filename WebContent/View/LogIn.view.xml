@@ -1,19 +1,60 @@
-<core:View xmlns:core="sap.ui.core" xmlns:vbm="sap.ui.vbm" xmlns:commons="sap.ui.commons" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+<core:View xmlns:core="sap.ui.core"
+ xmlns:vbm="sap.ui.vbm" 
+ xmlns:commons="sap.ui.commons"
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+  xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 		controllerName="com.test.Controller.LogIn" xmlns:html="http://www.w3.org/1999/xhtml">
 		
 		<Page title="Welcome to Mugalkhod Appaji App" showNavButton="true" navButtonPress="onPressStudentDetailsBack">
 		<content>
-			<SplitApp initialDetail="detail" initialMaster="master" >
+			<SplitApp id="SplitAppDemo" initialDetail="detailHome" initialMaster="master" orientationChange="onOrientationChange">
 				<detailPages>
-					<mvc:XMLView viewName="com.test.View.folder.Detail2" id="detail">
-                  </mvc:XMLView>
+					
+					<!-- 1 Home Page View -->
+						<mvc:XMLView id="detailHome" viewName="com.test.View.HomeDetail" />
+					<!-- Home Page View Ends -->
+					
+					
+					<!-- 2 Divya Shaktiya View -->
+						<mvc:XMLView id="detailDivyaShakti" viewName="com.test.View.DivyaShakti" />
+					<!-- Divya Shaktiya View Ends -->
+					
+					<!-- 3 Mutts View -->
+						<mvc:XMLView id="detailMutts" viewName="com.test.View.Mutts" />
+					<!-- Mutts View Ends -->
+					
+					<!-- 4 Events View -->
+						<mvc:XMLView id="detailEvents" viewName="com.test.View.Events" />
+					<!-- Events View Ends -->
+					
+					<!-- 5 Blogs View -->
+						<mvc:XMLView id="detailBlogs" viewName="com.test.View.Blogs" />
+					<!-- Blogs View Ends -->
+					
+					<!-- 6 Gallery View -->
+						<mvc:XMLView id="detailGallery" viewName="com.test.View.Gallery" />
+					<!-- Gallery View Ends -->
+					
+					<!-- 7 Contacts View -->
+						<mvc:XMLView id="detailContacts" viewName="com.test.View.Contacts" />
+					<!-- Gallery View Ends -->
+					
 				</detailPages>
-				<masterPages>
+			<masterPages>
 					<Page title="Menu List">
 						<content>
-							<List id="idListCourse"
-								mode="SingleSelectMaster" itemPress="handleList">
-								
+							<List itemPress="onListItemPress">
+								<items>
+							<StandardListItem title="Home" type="Active" custom:to="detailHome"/>
+							<StandardListItem title="Divya Shaktiya Bhavya Parampare" type="Active" custom:to="detailDivyaShakti"/>
+							<StandardListItem title="Mutts" type="Active" custom:to="detailMutts"/>
+							<StandardListItem title="Events" type="Active" custom:to="detailEvents"/>
+							<StandardListItem title="Blogs" type="Active" custom:to="detailDetailBlogs"/>
+							<StandardListItem title="Gallery" type="Active" custom:to="detailGallery"/>
+							<StandardListItem title="Contacts" type="Active" custom:to="detailContacts"/>
+							
+						</items>
 						   </List>
 							
 						</content>
@@ -25,24 +66,5 @@
 		</content>
 	</Page>
 	
-	<!-- <Page title="Home Page" floatingFooter="true" showFooter="true">
-		<headerContent>
-			<Button icon="sap-icon://background" tooltip="Change BackGround Wallpaper" press="onPressChangeBG"/>
-			<Button icon="Images/icons/color_picker.ico" tooltip="Change BackGround Color" press="handleResponsivePopoverPress"/>
-			<Button icon="sap-icon://background" tooltip="Transition BackGround Color" press="handleTransitionBGColor"/>
-		</headerContent>
-		
-		<content>
-			<Panel id="idSvgPanel" expandable="true" expanded="false" headerText="Login Panel" width="auto" class="sapUiResponsiveMargin">
-				<core:Fragment fragmentName="com.test.fragments.Login_Panel" type="XML" />
-				<Button tooltip="Press To Continue" text="Press To Continue as Guest" press="onPressLogIn"/>
-			</Panel>
-			<Slider value="30" width="90%" class="sapUiSmallMarginBottom" />
-			
-			<Panel id="idSvgPanelAnimation" expandable="true" expanded="false" headerText="Login Panel" width="auto" class="sapUiResponsiveMargin">
-			</Panel>
-			
-			<Image class="dbIcon" src="Images/icons/dash_board.jpg" tooltip="Nav To DashBoard" press="navToDashBoard"/>
-		</content>
-	</Page> -->
+	
 </core:View>
