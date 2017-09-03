@@ -17,15 +17,28 @@
 			id="container"
 			tileDelete="handleTileDelete">
 			<tiles>
-					<StandardTile
-				icon="{icon}"
+			
+				<StandardTile
+				icon="sap-icon://picture"
+				type="type"
+				number="Photos"
+				numberUnit="."
+				title="Contains List Wallpaper images, pictures etc"
+				info="offline"
+				infoState="infoState"
+				press="onPressPhoto" />
+				
+				<StandardTile
+				icon="sap-icon://video"
 				type="{type}"
-				number="{number}"
-				numberUnit="{numberUnit}"
-				title="Videos"
-				info="{info}"
+				number="Videos"
+				numberUnit="."
+				title="Contains Program videos and devotional songs"
+				info="online"
 				infoState="{infoState}"
 				press="onPressVideo" />
+				
+				
 			</tiles>
 					 
 		</TileContainer>

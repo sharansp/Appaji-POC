@@ -1,0 +1,30 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+		controllerName="com.test.Controller.Gallery.GalleryPhotos" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	
+	<Carousel class="sapUiContentPadding" loop="true">
+		<pages>
+			<Image src="Images/JagadguruImages/SiddalingaAppaji.jpg" alt="Example picture of speakers"/>
+ 
+			<Image src="Images/JagadguruImages/YallalingaAppaji.jpg" alt="Example picture of USB flash drive"/>
+ 
+			<Image src="Images/JagadguruImages/SiddaramShivayogi.jpg" alt="Example picture of spotlight"/>
+ 
+			<Image src="Images/JagadguruImages/MurugharajAppaji.jpg" alt="Example picture of screw"/>
+ 
+		</pages>
+	</Carousel>
+	
+	<!-- <Page id="idGalleryPhotosView">
+		<content>
+	 
+	 	
+					
+	</content>
+	</Page>	 -->
+
+
+
+		
+</core:View>

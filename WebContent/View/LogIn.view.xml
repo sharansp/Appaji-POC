@@ -6,9 +6,9 @@
   xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 		controllerName="com.test.Controller.LogIn" xmlns:html="http://www.w3.org/1999/xhtml">
 		
-		<Page title="Welcome to Mugalkhod Appaji App" showNavButton="true" navButtonPress="onPressStudentDetailsBack">
+		<Page title="Welcome to Mugalkhod Appaji App">
 		<content>
-			<SplitApp id="SplitAppDemo" initialDetail="detailHome" initialMaster="master" orientationChange="onOrientationChange">
+			<SplitApp id="SplitAppDemo" initialDetail="detailHome" initialMaster="idMaster" orientationChange="onOrientationChange">
 				<detailPages>
 					
 					<!-- 1 Home Page View -->
@@ -42,19 +42,36 @@
 					
 				</detailPages>
 			<masterPages>
-					<Page title="Menu List">
+					<Page title="Menu List" id="idMaster">
+						
+						<!-- Hide Show! -->
+						<customHeader>
+				            <Bar >
+				                <!-- <contentLeft>
+				                    <Button id="isInboxModeBack" icon="sap-icon://nav-back" press="back" tooltip="{i18n>view.Inbox.DashboardMaster.NavigateBack}" />
+				                    <Button id="isInboxModeHome" icon="sap-icon://home" press="tapHomeButton" tooltip="{i18n>view.Inbox.DashboardMaster.home}"  />
+				                </contentLeft>-->
+				                <contentMiddle>
+				                  <Label id="lblTitle" text="Menu List" />
+				                </contentMiddle> 
+				              <contentRight>
+							  <Button id="hideShowDashBoard" text="" press="hideShow" visible="true" tooltip="{i18n>view.AdvancedFilter.View.HideShow}" icon="sap-icon://exit-full-screen"/>
+				              </contentRight>
+				            </Bar>
+       					 </customHeader>
+       					 <!-- Hide Show Ends! -->
+        
 						<content>
 							<List itemPress="onListItemPress">
 								<items>
-							<StandardListItem title="Home" type="Active" custom:to="detailHome"/>
-							<StandardListItem title="Divya Shaktiya Bhavya Parampare" type="Active" custom:to="detailDivyaShakti"/>
-							<StandardListItem title="Mutts" type="Active" custom:to="detailMutts"/>
-							<StandardListItem title="Events" type="Active" custom:to="detailEvents"/>
-							<StandardListItem title="Blogs" type="Active" custom:to="detailBlogs"/>
-							<StandardListItem title="Gallery" type="Active" custom:to="detailGallery"/>
-							<StandardListItem title="Contacts" type="Active" custom:to="detailContacts"/>
-							
-						</items>
+									<StandardListItem title="Home" type="Active" custom:to="detailHome"/>
+									<StandardListItem title="Divya Shaktiya Bhavya Parampare" type="Active" custom:to="detailDivyaShakti"/>
+									<StandardListItem title="Mutts" type="Active" custom:to="detailMutts"/>
+									<StandardListItem title="Events" type="Active" custom:to="detailEvents"/>
+									<StandardListItem title="Blogs" type="Active" custom:to="detailBlogs"/>
+									<StandardListItem title="Gallery" type="Active" custom:to="detailGallery"/>
+									<StandardListItem title="Contacts" type="Active" custom:to="detailContacts"/>
+								</items>
 						   </List>
 							
 						</content>

@@ -11,7 +11,16 @@ sap.ui.controller("com.test.Controller.DivyaShakti.SiddalingaAppaji", {
 		oView.setShowNavButton(true);
 		oView.attachNavButtonPress(function(navPress) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
-			oRouter.navTo("DivyaShakti");
+			oRouter.navTo("Login");
+			
+			/*var oHistory = sap.ui.core.routing.History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				oRouter.navTo("DivyaShakti", true);
+			}*/
 		});
 	},
 	

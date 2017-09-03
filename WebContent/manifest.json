@@ -69,6 +69,11 @@
                "target":"VideosHTML"
             },
             {  
+               "pattern":"GalleryPhotos",
+               "name":"GalleryPhotos",
+               "target":"GalleryPhotos"
+            },
+            {  
                "pattern":"SiddalingaAppaji",
                "name":"SiddalingaAppaji",
                "target":"SiddalingaAppaji"
@@ -111,8 +116,14 @@
                "viewName":"Games",
                "transition":"flip"
             },
+           
+            "GalleryPhotos":{  
+               "viewName":"Gallery.GalleryPhotos",
+               "transition":"flip",
+               "viewType": "XML"
+            },
             "VideosHTML":{  
-               "viewName":"VideosHTML",
+               "viewName":"Gallery.VideosHTML",
                "transition":"flip",
                "viewType": "HTML"
             },

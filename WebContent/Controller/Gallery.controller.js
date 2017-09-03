@@ -20,7 +20,13 @@ sap.ui.controller("com.test.Controller.Gallery", {
 	onPressVideo: function() {
 		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		this.oRouter = oRouter;
-		this.oRouter.navTo("VideosHTML");
+		this.oRouter.navTo("VideosHTML",false);
+	},
+	
+	onPressPhoto: function() {
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		this.oRouter = oRouter;
+		this.oRouter.navTo("GalleryPhotos",false);
 	},
 		
 	

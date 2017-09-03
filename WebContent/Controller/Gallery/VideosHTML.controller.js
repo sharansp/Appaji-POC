@@ -1,11 +1,28 @@
-sap.ui.controller("com.test.Controller.VideosHTML", {
+sap.ui.controller("com.test.Controller.Gallery.VideosHTML", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf View.VideosHTML
 */
-	onInit: function() {
+	onInit: function(e) {
+		var that = this;
+		var oView = e.getSource().byId('idVideosHTMLView');
+		oView.setShowNavButton(true);
+		oView.attachNavButtonPress(function(navPress) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+			oRouter.navTo("LogIn",false);
+			
+			/*var oHistory = sap.ui.core.routing.History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-oHistory.aHistory.length);
+			} else {
+				oRouter.navTo("DivyaShakti", true);
+			}*/
+			
+		});
 	},
 	
 	navButtonPress: function() {
@@ -33,8 +50,8 @@ sap.ui.controller("com.test.Controller.VideosHTML", {
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.
 * @memberOf View.VideosHTML
 */
-//	onExit: function() {
-//
-//	}
+	onExit: function() {
+		
+	}
 
 });
