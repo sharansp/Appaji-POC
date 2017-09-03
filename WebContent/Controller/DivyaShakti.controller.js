@@ -11,9 +11,10 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 		var oModel = new sap.ui.model.json.JSONModel( );
 		oModel.setData(oModel.loadData("json/Jagadgurus.json"),"model");
 		modelData = oModel.getData();
+		var that = this;
 		
 		oModel.attachRequestCompleted(function(){
-			console.log(oModel.getData());
+			
 			var oNewsContent = new sap.m.NewsContent({contentText:"Test1"});
 			 var modelData = oModel.getData();
 			var length =  oModel.getData().length;
@@ -24,7 +25,18 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 					frameType:"TwoByOne",
 					backgroundImage:modelData[i].backgroundImage,
 					press:function(evt){
-						alert("?");
+						 var src = evt.getSource();
+						 var key = src.getBackgroundImage();
+						var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+						//oRouter.navTo("SiddalingaAppaji");
+						var arrAppaji = ["SiddalingaAppaji","MurugharajAppaji","SiddaramShivayogi","YallalingaAppaji"];
+						arrAppaji.forEach(function(val,i){
+							if(key.includes(val))
+								oRouter.navTo(val);
+							/*else
+								alert("Page Not Found!")*/
+							});
+						
 					},
 					tileContent:{
 						unit:"12",
@@ -41,20 +53,7 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 			
 		});
 		
-		/*var page = this.oView.byId("idHomeDetailView");
-		var i=0,tile="";
-		tile = new sap.m.FormattedText ({
-			htmlText: "<h3 style=\"color:green; font-weight:600;\">Welcome to the Application of Mugalkhod Jidga Mutt</h3>" +
-			"<p style=\"color:black; font-weight:400;\">The Mugalkhod sampradaya started by Sri Sri Sadguru Yallalinga Appaji Mugalkhod and continued by Sri Sri Shadakshari Shivayogi Siddarameshwara Appaji, pujya Appaji established 365 Mutts across India, namely in Karnataka, Andhra Pradesh, Maharashtra and Goa. The presiding deity of these mutt is Sri Sri Pujya Murugharajendra Appaji, the third in the illustrious and unbroken lineage of mutthadhipati of mugalkhod mutt and second in the Jidga mutt.</p>"+
-			"<p style=\"color:black; font-weight:400;\">The Jagadguru upholds the activities of the mutt towards uniting all Dharma, Kula as manava kula Dharma while pervading the lives of many thousands of disciples as their spiritual guide..</p>"+
-			"<p style=\"color:black; font-weight:400;\">Pujya Appaji, Mugalkhod and Jidga mutts are verily the wishing tree, divine jewel all in one , fulfilling the righteous desires to all those deserving souls who visit these mutts and pray for his benevolence. No one has disappointed as these mutts and pujya Appaji answers to all the prayers, grants all desires and makes the devotees happy.</p>"
-		})
 		
-		var vbox = new sap.m.VBox();
-		vbox.addItem(tile);
-		page.addContent(vbox);*/
-		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
 	},
 	
 		

@@ -67,7 +67,13 @@
                "pattern":"VideosHTML",
                "name":"VideosHTML",
                "target":"VideosHTML"
-            }            
+            },
+            {  
+               "pattern":"SiddalingaAppaji",
+               "name":"SiddalingaAppaji",
+               "target":"SiddalingaAppaji"
+            }
+                        
          ],
          "targets":{  
             "overview":{  
@@ -94,7 +100,13 @@
                "viewName":"VideosHTML",
                "transition":"flip",
                "viewType": "HTML"
+            },
+            "SiddalingaAppaji":{  
+               "viewName":"DivyaShakti.SiddalingaAppaji",
+               "transition":"flip",
+               "viewType": "HTML"
             }
+            
          }
       }
    }
