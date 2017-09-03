@@ -72,6 +72,21 @@
                "pattern":"SiddalingaAppaji",
                "name":"SiddalingaAppaji",
                "target":"SiddalingaAppaji"
+            },
+            {  
+               "pattern":"MurugharajAppaji",
+               "name":"MurugharajAppaji",
+               "target":"MurugharajAppaji"
+            },
+            {  
+               "pattern":"YallalingaAppaji",
+               "name":"YallalingaAppaji",
+               "target":"YallalingaAppaji"
+            },
+            {  
+               "pattern":"SiddaramShivayogi",
+               "name":"SiddaramShivayogi",
+               "target":"SiddaramShivayogi"
             }
                         
          ],
@@ -103,6 +118,21 @@
             },
             "SiddalingaAppaji":{  
                "viewName":"DivyaShakti.SiddalingaAppaji",
+               "transition":"flip",
+               "viewType": "HTML"
+            },
+            "MurugharajAppaji":{  
+               "viewName":"DivyaShakti.MurugharajAppaji",
+               "transition":"flip",
+               "viewType": "HTML"
+            },
+            "SiddaramShivayogi":{  
+               "viewName":"DivyaShakti.SiddaramShivayogi",
+               "transition":"flip",
+               "viewType": "HTML"
+            },
+            "YallalingaAppaji":{  
+               "viewName":"DivyaShakti.YallalingaAppaji",
                "transition":"flip",
                "viewType": "HTML"
             }

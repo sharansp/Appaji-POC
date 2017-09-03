@@ -31,10 +31,10 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 						//oRouter.navTo("SiddalingaAppaji");
 						var arrAppaji = ["SiddalingaAppaji","MurugharajAppaji","SiddaramShivayogi","YallalingaAppaji"];
 						arrAppaji.forEach(function(val,i){
-							if(key.includes(val))
+							if(key.includes(val)){
 								oRouter.navTo(val);
-							/*else
-								alert("Page Not Found!")*/
+								return;
+							}
 							});
 						
 					},
