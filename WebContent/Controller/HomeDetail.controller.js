@@ -1,3 +1,5 @@
+jQuery.sap.require("com.test.Generic.Common");
+
 sap.ui.controller("com.test.Controller.HomeDetail", {
 
 /**
@@ -6,24 +8,43 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
+		//this.createDeviceModel();
 		var page = this.oView.byId("idHomeDetailView");
 		var i=0,tile="";
-		tile = new sap.m.FormattedText ({
+		var oText = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:green; font-weight:600;\">Welcome to the Application of Mugalkhod Jidga Mutt</h3>" +
 			"<p style=\"color:black; font-weight:400;\">The Mugalkhod sampradaya started by Sri Sri Sadguru Yallalinga Appaji Mugalkhod and continued by Sri Sri Shadakshari Shivayogi Siddarameshwara Appaji, pujya Appaji established 365 Mutts across India, namely in Karnataka, Andhra Pradesh, Maharashtra and Goa. The presiding deity of these mutt is Sri Sri Pujya Murugharajendra Appaji, the third in the illustrious and unbroken lineage of mutthadhipati of mugalkhod mutt and second in the Jidga mutt.</p>"+
 			"<p style=\"color:black; font-weight:400;\">The Jagadguru upholds the activities of the mutt towards uniting all Dharma, Kula as manava kula Dharma while pervading the lives of many thousands of disciples as their spiritual guide..</p>"+
-			"<p style=\"color:black; font-weight:400;\">Pujya Appaji, Mugalkhod and Jidga mutts are verily the wishing tree, divine jewel all in one , fulfilling the righteous desires to all those deserving souls who visit these mutts and pray for his benevolence. No one has disappointed as these mutts and pujya Appaji answers to all the prayers, grants all desires and makes the devotees happy.</p>"
-		})
+			"<p style=\"color:black; font-weight:400;\">Pujya Appaji, Mugalkhod and Jidga mutts are verily the wishing tree, divine jewel all in one , fulfilling the righteous desires to all those deserving souls who visit these mutts and pray for his benevolence. No one has disappointed as these mutts and pujya Appaji answers to all the prayers, grants all desires and makes the devotees happy.</p>"+
+			"<p style=\"color:black; font-weight:400;\">This website is a humble attempt to spread the divine message of pujya Appaji.</p>"
+		});
+		//Images/guru-vani.jpg
+		var oImage = new sap.m.Image ({
+			src:"Images/guru-vani.jpg",
+			densityAware:false,
+			width:"{/imageWidth}"
+		});
+		var oVbox = new sap.m.HBox();
+		oVbox.addItem(oText);
+		oVbox.addItem(oImage);
 		
-		var vbox = new sap.m.VBox();
-		vbox.addItem(tile);
 		if(page)
-		page.addContent(vbox);
-		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
+		page.addContent(oVbox);
+		if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
 	},
 	
+	
 		
+	createDeviceModel: function() {
+		var deviceModel = new sap.ui.model.json.JSONModel({
+		    isPhone: !sap.ui.Device.system.phone
+		});
+		deviceModel.refresh();
+		sap.ui.getCore().setModel(deviceModel, "device");
+		deviceModel.refresh();
+		},
 	
 
 /**

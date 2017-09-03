@@ -5,13 +5,13 @@
 	
 	<Carousel class="sapUiContentPadding" loop="true">
 		<pages>
-			<Image src="Images/JagadguruImages/SiddalingaAppaji.jpg" alt="Example picture of speakers"/>
+			<Image src="Images/JagadguruImages/SiddalingaAppaji.jpg" alt="Example picture of Siddalinga Appaji"/>
  
-			<Image src="Images/JagadguruImages/YallalingaAppaji.jpg" alt="Example picture of USB flash drive"/>
+			<Image src="Images/JagadguruImages/YallalingaAppaji.jpg" alt="Example picture of Yallalinga Appaji"/>
  
-			<Image src="Images/JagadguruImages/SiddaramShivayogi.jpg" alt="Example picture of spotlight"/>
+			<Image src="Images/JagadguruImages/SiddaramShivayogi.jpg" alt="Example picture of Siddaram Shivayogi"/>
  
-			<Image src="Images/JagadguruImages/MurugharajAppaji.jpg" alt="Example picture of screw"/>
+			<Image src="Images/JagadguruImages/MurugharajAppaji.jpg" alt="Example picture of Murugharaj Appaji"/>
  
 		</pages>
 	</Carousel>

@@ -12,7 +12,9 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 		oModel.setData(oModel.loadData("json/Jagadgurus.json"),"model");
 		modelData = oModel.getData();
 		var that = this;
-		
+		if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
 		oModel.attachRequestCompleted(function(){
 			
 			var oNewsContent = new sap.m.NewsContent({contentText:"Test1"});

@@ -10,6 +10,15 @@ com.test.Generic.Common= {
 		navback : function(evt){
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("overview");
-		}
+		},
+		handleNavButtonPress: function () {
+		    var oSplitApp = this.getView().getParent().getParent();
+		    var oMaster = oSplitApp.getMasterPages()[0];
+		    oSplitApp.toMaster(oMaster);
+		},
+		isPhone : function () {
+			return sap.ui.Device.system.phone;	
+		},
+		
 };
 

@@ -7,6 +7,9 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 */
 	onInit: function() {
 		var page = this.oView.byId("idHomeDetailView");
+		  if(sap.ui.Device.system.phone){
+				page.setShowNavButton(true);
+			}
 		var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:green; font-weight:600;\">Welcome to the Application of Mugalkhod Jidga Mutt</h3>" +

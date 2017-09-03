@@ -6,8 +6,11 @@ sap.ui.controller("com.test.Controller.Gallery", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
-		/*var page = this.oView.byId("idGalleryDetailView");
-		var i=0,tile="";
+		var page = this.oView.byId("idGalleryDetailView");
+		  if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
+		  /*var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:red; font-weight:600;\">Gallery</h3>"
 		})

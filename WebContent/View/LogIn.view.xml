@@ -6,7 +6,7 @@
   xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 		controllerName="com.test.Controller.LogIn" xmlns:html="http://www.w3.org/1999/xhtml">
 		
-		<Page title="Welcome to Mugalkhod Appaji App">
+		<Page title="Welcome to Mugalkhod Appaji App"  showHeader="true">
 		<content>
 			<SplitApp id="SplitAppDemo" initialDetail="detailHome" initialMaster="idMaster" orientationChange="onOrientationChange">
 				<detailPages>

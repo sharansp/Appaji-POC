@@ -7,6 +7,9 @@ sap.ui.controller("com.test.Controller.Events", {
 */
 	onInit: function() {
 		var page = this.oView.byId("idEventsDetailView");
+		if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
 		var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:green; font-weight:600;\">Events</h3>"

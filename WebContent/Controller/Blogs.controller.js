@@ -7,6 +7,9 @@ sap.ui.controller("com.test.Controller.Blogs", {
 */
 	onInit: function() {
 		var page = this.oView.byId("idBlogsDetailView");
+		if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
 		var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:blue; font-weight:600;\">Blogs</h3>"

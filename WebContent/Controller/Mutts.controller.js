@@ -7,6 +7,9 @@ sap.ui.controller("com.test.Controller.Mutts", {
 */
 	onInit: function() {
 		var page = this.oView.byId("idMuttsDetailView");
+		if(sap.ui.Device.system.phone){
+			page.setShowNavButton(true);
+		}
 		var oTable = new sap.m.Table({   
 		      inset : true, 
 		      headerText : "List of Mutts",
