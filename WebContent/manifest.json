@@ -74,6 +74,11 @@
                "target":"GalleryPhotos"
             },
             {  
+               "pattern":"GallerySongs",
+               "name":"GallerySongs",
+               "target":"GallerySongs"
+            },
+            {  
                "pattern":"SiddalingaAppaji",
                "name":"SiddalingaAppaji",
                "target":"SiddalingaAppaji"
@@ -121,6 +126,11 @@
                "viewName":"Gallery.GalleryPhotos",
                "transition":"flip",
                "viewType": "XML"
+            },
+             "GallerySongs":{  
+               "viewName":"Gallery.GallerySongs",
+               "transition":"flip",
+               "viewType": "HTML"
             },
             "VideosHTML":{  
                "viewName":"Gallery.VideosHTML",

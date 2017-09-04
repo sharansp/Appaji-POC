@@ -5,6 +5,10 @@
 	
 	<Carousel class="sapUiContentPadding" loop="true">
 		<pages>
+		
+			<!-- http://mugalkhod.org/photos/photodec2-2011/slideshow.xml -->
+			<!-- http://mugalkhod.org/photos/photodec2-2011/part1%20photos/dsc_0009.jpg -->
+			<!-- http://kolber.github.io/audiojs/demos/mp3/juicy.mp3 -->
 			<Image src="Images/JagadguruImages/SiddalingaAppaji.jpg" alt="Example picture of Siddalinga Appaji"/>
  
 			<Image src="Images/JagadguruImages/YallalingaAppaji.jpg" alt="Example picture of Yallalinga Appaji"/>

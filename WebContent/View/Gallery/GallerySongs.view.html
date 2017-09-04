@@ -1,0 +1,41 @@
+<template data-controller-name="com.test.Controller.Gallery.GallerySongs">
+	<div data-sap-ui-type="sap.m.Page" id="idGallerySongsView" data-title="Gallery Songs">
+		<div data-sap-ui-aggregation="content">
+		
+		
+	
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" href="./libraries/AudioPlayer/css/reset.css" />
+		<link rel="stylesheet" href="./libraries/AudioPlayer/css/demo.css" />
+		<link rel="stylesheet" href="./libraries/AudioPlayer/css/audioplayer.css" />
+		
+		 <h1>Devotional Songs</h1> 
+		<div id="wrapper">
+		<p> NEE-ELLI-HODE </p>
+			<audio preload="auto" controls>
+				<source src="./libraries/AudioPlayer/audio/02-NEE-ELLI-HODE.mp3">
+			</audio>
+		<p>SHADAKSHARI SHIVAYOGI</p>
+			
+			<audio preload="auto" controls>
+				<source src="./libraries/AudioPlayer/audio/03-SHADAKSHARI SHIVAYOGI.mp3">
+			</audio>
+			<script src="./libraries/AudioPlayer/js/jquery.js"></script>
+			<script src="./libraries/AudioPlayer/js/audioplayer.min.js"></script>
+			<script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
+
+			<div class="attribution">
+				<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://freemusicarchive.org/music/Blue_Ducks/Six/">
+					<span property="dct:title">Song Name</span> 
+				</div>
+			</div>
+		</div>
+
+	</body>
+	
+		
+		</div>
+	</div>
+</template>

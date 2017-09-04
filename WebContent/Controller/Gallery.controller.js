@@ -31,6 +31,12 @@ sap.ui.controller("com.test.Controller.Gallery", {
 		this.oRouter = oRouter;
 		this.oRouter.navTo("GalleryPhotos",false);
 	},
+	
+	onPressAudio: function() {
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		this.oRouter = oRouter;
+		this.oRouter.navTo("GallerySongs",false);
+	},
 		
 	
 

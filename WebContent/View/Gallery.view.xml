@@ -38,6 +38,16 @@
 				infoState="{infoState}"
 				press="onPressVideo" />
 				
+				<StandardTile
+				icon="sap-icon://attachment-audio"
+				type="{type}"
+				number="Audios"
+				numberUnit="."
+				title="Contains Devotional Audio songs"
+				info="online"
+				infoState="{infoState}"
+				press="onPressAudio" />
+				
 				
 			</tiles>
 					 
