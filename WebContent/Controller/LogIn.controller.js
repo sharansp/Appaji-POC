@@ -31,8 +31,8 @@ sap.ui.controller("com.test.Controller.LogIn", {
 		var oApp = this.getSplitAppObj();
 		oApp.toDetail(this.createId(sToPageId));
 		
-		 if(jQuery.device.is.phone)
-			 this.hideShow(oEvent,true);
+		 /*if(jQuery.device.is.phone)
+			 this.hideShow(oEvent,true);*/
 	},
 
 	onPressModeBtn : function(oEvent) {
