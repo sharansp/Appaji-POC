@@ -6,7 +6,7 @@ sap.ui.controller("com.test.Controller.Contacts", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
-		var page = this.oView.byId("idHomeDetailView");
+		var page = this.oView.byId("idContactsDetailView");
 		  if(sap.ui.Device.system.phone){
 				page.setShowNavButton(true);
 			}

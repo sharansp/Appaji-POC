@@ -8,6 +8,10 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
+		var page = this.oView.byId("idHomeDetailView");
+		  if(sap.ui.Device.system.phone){
+				page.setShowNavButton(true);
+			}
 		//this.createDeviceModel();
 		/*var page = this.oView.byId("idHomeDetailView");
 		var i=0,tile="";
