@@ -2,7 +2,7 @@
 		xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 		controllerName="com.test.Controller.Gallery.GalleryPhotos" xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	
+	<Page showNavButton="true"  title="Photos" navButtonPress="navBack">
 	<Carousel class="sapUiContentPadding" loop="true">
 		<pages>
 		
@@ -19,6 +19,7 @@
  
 		</pages>
 	</Carousel>
+	</Page>
 	
 	<!-- <Page id="idGalleryPhotosView">
 		<content>

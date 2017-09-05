@@ -1,4 +1,4 @@
-sap.ui.controller("com.test.Controller.HomeDetail", {
+sap.ui.controller("com.test.Controller.Contacts", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -12,10 +12,8 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 			}
 		var i=0,tile="";
 		tile = new sap.m.FormattedText ({
-			htmlText: "<h3 style=\"color:green; font-weight:600;\">Welcome to the Application of Mugalkhod Jidga Mutt</h3>" +
-			"<p style=\"color:black; font-weight:400;\">The Mugalkhod sampradaya started by Sri Sri Sadguru Yallalinga Appaji Mugalkhod and continued by Sri Sri Shadakshari Shivayogi Siddarameshwara Appaji, pujya Appaji established 365 Mutts across India, namely in Karnataka, Andhra Pradesh, Maharashtra and Goa. The presiding deity of these mutt is Sri Sri Pujya Murugharajendra Appaji, the third in the illustrious and unbroken lineage of mutthadhipati of mugalkhod mutt and second in the Jidga mutt.</p>"+
-			"<p style=\"color:black; font-weight:400;\">The Jagadguru upholds the activities of the mutt towards uniting all Dharma, Kula as manava kula Dharma while pervading the lives of many thousands of disciples as their spiritual guide..</p>"+
-			"<p style=\"color:black; font-weight:400;\">Pujya Appaji, Mugalkhod and Jidga mutts are verily the wishing tree, divine jewel all in one , fulfilling the righteous desires to all those deserving souls who visit these mutts and pray for his benevolence. No one has disappointed as these mutts and pujya Appaji answers to all the prayers, grants all desires and makes the devotees happy.</p>"
+			htmlText: "<h3 style=\"color:green; font-weight:600;\">Contacts</h3>" 
+
 		})
 		
 		var vbox = new sap.m.VBox();

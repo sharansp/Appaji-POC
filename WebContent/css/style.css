@@ -13,6 +13,14 @@
         	/*background-size:cover !important;*/
         	    margin-right: 10px;
         }
+
+.HomeDeatilText {
+
+    max-height: 192px;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    
+}
         
 .kc_fab_main_btn{
   background-color:#F44336;
@@ -38,4 +46,15 @@
     vertical-align: middle;
     display: block;
     border-radius: 20px;
+}
+.txt_subhead_blue
+{
+	margin: 0px 0px 5px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 18px;
+    vertical-align: top;
+    color: rgb(204, 51, 0);
+    font-family: arial;
+    text-align: left;
 }

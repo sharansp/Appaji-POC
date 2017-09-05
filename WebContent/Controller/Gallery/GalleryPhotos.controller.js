@@ -7,6 +7,8 @@ sap.ui.controller("com.test.Controller.Gallery.GalleryPhotos", {
 */
 	onInit: function() {
 		
+//		var oView = e.getSource().byId('idGallerySongsView');
+//		oView.setShowNavButton(true);
 //		var oModel = new JSONModel(jQuery.sap.getModulePath("sap.ui.demo.mock", "/products.json"));
 //		this.getView().setModel(oModel);
 //		var oImgModel = new JSONModel(jQuery.sap.getModulePath("sap.ui.demo.mock", "/img.json"));
@@ -28,7 +30,12 @@ sap.ui.controller("com.test.Controller.Gallery.GalleryPhotos", {
 		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
 	},
 	
-		
+	
+	
+	navBack : function(evt){
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		oRouter.navTo("Login");
+	},
 	
 
 /**

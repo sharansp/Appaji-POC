@@ -9,18 +9,18 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 */
 	onInit: function() {
 		//this.createDeviceModel();
-		var page = this.oView.byId("idHomeDetailView");
+		/*var page = this.oView.byId("idHomeDetailView");
 		var i=0,tile="";
 		var oText = new sap.m.FormattedText ({
-			htmlText: "<h3 style=\"color:green; font-weight:600;\">Welcome to the Application of Mugalkhod Jidga Mutt</h3>" +
+			htmlText: "<h3 style=\"color:green; font-weight:600;\"></h3>" +
 			"<p style=\"color:black; font-weight:400;\">The Mugalkhod sampradaya started by Sri Sri Sadguru Yallalinga Appaji Mugalkhod and continued by Sri Sri Shadakshari Shivayogi Siddarameshwara Appaji, pujya Appaji established 365 Mutts across India, namely in Karnataka, Andhra Pradesh, Maharashtra and Goa. The presiding deity of these mutt is Sri Sri Pujya Murugharajendra Appaji, the third in the illustrious and unbroken lineage of mutthadhipati of mugalkhod mutt and second in the Jidga mutt.</p>"+
 			"<p style=\"color:black; font-weight:400;\">The Jagadguru upholds the activities of the mutt towards uniting all Dharma, Kula as manava kula Dharma while pervading the lives of many thousands of disciples as their spiritual guide..</p>"+
 			"<p style=\"color:black; font-weight:400;\">Pujya Appaji, Mugalkhod and Jidga mutts are verily the wishing tree, divine jewel all in one , fulfilling the righteous desires to all those deserving souls who visit these mutts and pray for his benevolence. No one has disappointed as these mutts and pujya Appaji answers to all the prayers, grants all desires and makes the devotees happy.</p>"+
 			"<p style=\"color:black; font-weight:400;\">This website is a humble attempt to spread the divine message of pujya Appaji.</p>"
 		});
 		//Images/guru-vani.jpg
-		var oImage = new sap.m.Image ({
-			src:"Images/guru-vani.jpg",
+		var oImage = new sap.m.Image ({//Images/guru-vani.jpg, front_3.PNG
+			src:"Images/Appaji_Standing.jpg",
 			densityAware:false,
 			width:"{/imageWidth}"
 		});
@@ -28,11 +28,21 @@ sap.ui.controller("com.test.Controller.HomeDetail", {
 		oVbox.addItem(oText);
 		oVbox.addItem(oImage);
 		
-		if(page)
-		page.addContent(oVbox);
-		if(sap.ui.Device.system.phone){
-			page.setShowNavButton(true);
-		}
+		var oImage1 = new sap.m.Image ({//Images/guru-vani.jpg, front_3.PNG
+			src:"Images/front_3.PNG",
+			densityAware:false,
+			width:"{/imageWidth}"
+		});*/
+		
+		
+		/*if(page){
+			page.addContent(oImage1);
+			page.addContent(oVbox);
+			if(sap.ui.Device.system.phone){
+				page.setShowNavButton(true);
+			}
+		}*/
+			
 	},
 	
 	
