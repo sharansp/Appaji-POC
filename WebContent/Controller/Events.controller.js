@@ -10,14 +10,14 @@ sap.ui.controller("com.test.Controller.Events", {
 		if(sap.ui.Device.system.phone){
 			page.setShowNavButton(true);
 		}
-		var i=0,tile="";
+		/*var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:green; font-weight:600;\">Events</h3>"
 		})
 		
 		var vbox = new sap.m.VBox();
 		vbox.addItem(tile);
-		page.addContent(vbox);
+		page.addContent(vbox);*/
 		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
 	},

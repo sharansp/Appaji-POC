@@ -1,14 +1,49 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<core:View xmlns:core="sap.ui.core"  		
+		xmlns="sap.ui.table"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+    height="100%"
 		xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 		controllerName="com.test.Controller.Events" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page id="idEventsDetailView" title="Events" navButtonPress="com.test.Generic.Common.handleNavButtonPress">
-		<content>
-	 
-	 	
+		
+		
+	<m:Page
+		id="idEventsDetailView"
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			<Table
+				
+				title="Products"
+				selectionMode="None"
+				>
+				<!--rows="{/ProductCollection}" visibleRowCount="7" -->
+				<columns>
+					<Column width="4rem">
+						<m:Label text="Date" />
+						<template>
+							<m:Text text="Name" wrapping="false" />
+						</template>
+					</Column>
+					<Column width="12rem" hAlign="Center">
+						<m:Label text="Description" />
+						<template>
+							<m:Input value="ProductId"/>
+						</template>
+					</Column>
+					<Column width="5rem" hAlign="Center">
+						<m:Label text="Place" />
+						<template>
+							<m:Label text="Quantity" />
+						</template>
+					</Column>
 					
-	</content>
-	</Page>	
-
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
 
 
 		

@@ -115,46 +115,46 @@
             },
             "DashBoard":{  
                "viewName":"DashBoard",
-               "transition":"flip"
+               "transition":"show"
             },
             "Games":{  
                "viewName":"Games",
-               "transition":"flip"
+               "transition":"show"
             },
            
             "GalleryPhotos":{  
                "viewName":"Gallery.GalleryPhotos",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "XML"
             },
              "GallerySongs":{  
                "viewName":"Gallery.GallerySongs",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             },
             "VideosHTML":{  
                "viewName":"Gallery.VideosHTML",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             },
             "SiddalingaAppaji":{  
                "viewName":"DivyaShakti.SiddalingaAppaji",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             },
             "MurugharajAppaji":{  
                "viewName":"DivyaShakti.MurugharajAppaji",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             },
             "SiddaramShivayogi":{  
                "viewName":"DivyaShakti.SiddaramShivayogi",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             },
             "YallalingaAppaji":{  
                "viewName":"DivyaShakti.YallalingaAppaji",
-               "transition":"flip",
+               "transition":"show",
                "viewType": "HTML"
             }
             

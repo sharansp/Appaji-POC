@@ -10,8 +10,10 @@
         	margin-left:25px;
         	margin-top:25px;
         	margin-bottom:25px;
-        	/*background-size:cover !important;*/
-        	    margin-right: 10px;
+        	/* background-size:cover !important; */
+        	background-repeat:no-repeat;
+   	        /* height: 404px;
+    		width: 100%; */
         }
 
 .HomeDeatilText {
