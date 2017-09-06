@@ -15,28 +15,35 @@
 		class="sapUiContentPadding">
 		<m:content>
 			<Table
-				
+					rows="{/ProductCollection}"
 				title="Products"
 				selectionMode="None"
 				>
 				<!--rows="{/ProductCollection}" visibleRowCount="7" -->
 				<columns>
-					<Column width="4rem">
+					<Column width="6rem">
 						<m:Label text="Date" />
 						<template>
-							<m:Text text="Name" wrapping="false" />
+							<!-- <m:Text text="{DateOfSale}" wrapping="false" /> -->
+							<m:ObjectIdentifier
+								title="{Date_Day}"
+								text="{Date_Month}"/><!-- title="2" -->
 						</template>
 					</Column>
-					<Column width="12rem" hAlign="Center">
+					<Column width="13rem" hAlign="Center">
 						<m:Label text="Description" />
 						<template>
-							<m:Input value="ProductId"/>
+						 <m:Text text="{Description}" wrapping="true" /> 
+								<!-- <m:ObjectAttribute
+				title="Some very long title that will strat to truncate on smaller screen"
+				text="Some very long text that will strat to truncate on smaller screen"
+				active="true"/> -->
 						</template>
 					</Column>
-					<Column width="5rem" hAlign="Center">
+					<Column width="6rem" hAlign="Center">
 						<m:Label text="Place" />
 						<template>
-							<m:Label text="Quantity" />
+							<m:Label text="{Place}" />
 						</template>
 					</Column>
 					
