@@ -1,4 +1,4 @@
-sap.ui.controller("com.test.Controller.Contacts", {
+sap.ui.controller("com.test.Controller.Abhishekam", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -6,7 +6,7 @@ sap.ui.controller("com.test.Controller.Contacts", {
 * @memberOf loginapp.App
 */
 	onInit: function() {
-		var page = this.oView.byId("idContactsDetailView");
+		var page = this.oView.byId("idAbhishekamDetailView");
 		  if(sap.ui.Device.system.phone){
 				page.setShowNavButton(true);
 			}
