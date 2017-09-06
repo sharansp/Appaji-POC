@@ -21,7 +21,7 @@
 				>
 				<!--rows="{/ProductCollection}" visibleRowCount="7" -->
 				<columns>
-					<Column width="6rem">
+					<Column >
 						<m:Label text="Date" />
 						<template>
 							<!-- <m:Text text="{DateOfSale}" wrapping="false" /> -->
@@ -30,7 +30,7 @@
 								text="{Date_Month}"/><!-- title="2" -->
 						</template>
 					</Column>
-					<Column width="13rem" hAlign="Center">
+					<Column hAlign="Center">
 						<m:Label text="Description" />
 						<template>
 						 <m:Text text="{Description}" wrapping="true" /> 
@@ -40,7 +40,7 @@
 				active="true"/> -->
 						</template>
 					</Column>
-					<Column width="6rem" hAlign="Center">
+					<Column  hAlign="Center">
 						<m:Label text="Place" />
 						<template>
 							<m:Label text="{Place}" />
