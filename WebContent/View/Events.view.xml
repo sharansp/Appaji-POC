@@ -16,7 +16,7 @@
 		<m:content>
 			<Table
 					rows="{/ProductCollection}"
-				title="Products"
+				title="Events Details"
 				selectionMode="None"
 				>
 				<!--rows="{/ProductCollection}" visibleRowCount="7" -->
