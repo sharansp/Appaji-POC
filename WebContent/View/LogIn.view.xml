@@ -37,7 +37,7 @@
 					<!-- Gallery View Ends -->
 					
 					<!-- 7 Abhishekam seva View -->
-						<mvc:XMLView id="detailAbhishekam" viewName="com.test.View.Abhishekam" />
+						<mvc:HTMLView id="detailAbhishekam" viewName="com.test.View.Abhishekam" />
 					<!-- Abhishekam seva View Ends -->
 
 
