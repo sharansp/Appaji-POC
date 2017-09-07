@@ -1,6 +1,8 @@
-
-@CHARSET "ISO-8859-1";
-
+html.sap-desktop ::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #f7f7f7;
+}
 .dbIcon {
         	margin-left:570px;
         	
@@ -59,4 +61,23 @@
     color: rgb(204, 51, 0);
     font-family: arial;
     text-align: left;
+}
+.main-content
+{
+  font-family: arial !important;
+  font-size: 13px !important;
+  margin: 5px !important;
+  padding:5px !important;
+  color:#506358 !important;
+ line-height: 24px !important;
+    text-align: justify !important;
+  font-weight: normal !important;
+}
+.page-header .sapMPageHeader
+{
+  display: none !important;
+}
+.header-img
+{
+  margin:5px !important;
 }
