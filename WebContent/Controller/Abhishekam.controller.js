@@ -7,9 +7,13 @@ sap.ui.controller("com.test.Controller.Abhishekam", {
 */
 	onInit: function() {
 		var page = this.oView.byId("idAbhishekamDetailView");
-		  if(sap.ui.Device.system.phone){
+		  if(!sap.ui.Device.system.phone){
 				page.setShowNavButton(true);
 			}
+			page.attachNavButtonPress(function(evt){
+				com.test.Generic.Common.handleNavButtonPress(this.getParent().getParent().getParent());
+			});
+
 		/*var i=0,tile="";
 		tile = new sap.m.FormattedText ({
 			htmlText: "<h3 style=\"color:green; font-weight:600;\">Contacts</h3>" 
@@ -23,7 +27,9 @@ sap.ui.controller("com.test.Controller.Abhishekam", {
 		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
 	},
-	
+	doIt : function(){
+		alert("?");
+	},
 		
 	
 
