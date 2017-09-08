@@ -79,5 +79,6 @@ html.sap-desktop ::-webkit-scrollbar {
 }
 .header-img
 {
-  margin:5px !important;
+  margin:0 auto !important;
+  display: block !important;
 }
