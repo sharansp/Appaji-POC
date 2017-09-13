@@ -11,9 +11,11 @@ com.test.Generic.Common= {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("overview");
 		},
-		handleNavButtonPress: function () {
-		    var oSplitApp = this.getView().getParent().getParent();
-		    var oMaster = oSplitApp.getMasterPages()[0];
+		handleNavButtonPress: function (oSplitApp) {
+			if(!oSplitApp){
+		    	var oSplitApp = this.getView().getParent().getParent();
+		    }
+			var oMaster = oSplitApp.getMasterPages()[0];
 		    oSplitApp.toMaster(oMaster);
 		},
 		isPhone : function () {
