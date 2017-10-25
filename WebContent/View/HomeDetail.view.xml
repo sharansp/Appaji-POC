@@ -7,6 +7,8 @@
 	 <Page id="idHomeDetailView"  class="page-header" navButtonPress="com.test.Generic.Common.handleNavButtonPress">
 		<!-- design= 'sap.ui.commons.TextViewDesign.H1' width = '70%' -->
 	<content>
+		<!-- <marquee>This text will scroll from right to left</marquee> -->
+		<core:HTML content="&lt;marquee onmouseover='this.stop()' onmouseout='this.start()' &gt; ಮುಗಳಖೋಡ - ಜಿಡಾಗ ಮಠ : 2018ರ ಜನೆವರಿ 12,13,14 ರಂದು ನಡಿಯಲ್ಲಿರುವ ಶ್ರೀ ಸಿದ್ಧರಾಮೇಶ್ವರ ಸಂಕಲ್ಪ ಯಾತ್ರೆ &lt;/marquee&gt;"/>
 	<Image
 					src="Images/front_3.PNG"
 					densityAware="false"

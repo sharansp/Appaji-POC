@@ -1,3 +1,6 @@
+
+
+jQuery.sap.require("com.test.Generic.InteractiveNetwork");
 sap.ui.controller("com.test.Controller.Contacts", {
 
 /**
@@ -5,7 +8,7 @@ sap.ui.controller("com.test.Controller.Contacts", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf loginapp.App
 */
-	onInit: function() {
+	/*onInit: function() {
 		var page = this.oView.byId("idContactsDetailView");
 		  if(sap.ui.Device.system.phone){
 				page.setShowNavButton(true);
@@ -22,8 +25,86 @@ sap.ui.controller("com.test.Controller.Contacts", {
 		page.addContent(vbox);
 		//var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 		//oRouter.getRoute("StudentSessions").attachPatternMatched(this._onObjectMatched, this);
-	},
+	},*/
 	
+	onInit: function() {
+			// Get data:
+			debugger;
+			//com.test.Generic.InteractiveNetwork
+			//idFlexBoxFL
+			fl = new com.test.Generic.InteractiveNetwork();
+			var sBaseUrl = {
+							  "graph": {
+							    "nodes": [{
+							      "id": 11111,
+							      "name": "Mickey Mouse",
+							      "weight": 4
+							    }, {
+							      "id": 22222,
+							      "name": "Donald Duck",
+							      "weight": 3
+							    },{
+							      "id": 33333,
+							      "name": "Minnie Mouse",
+							      "weight": 5
+							    }],
+							   "links": [{
+							      "source": 11111,
+							      "target": 33333,
+							      "weight": 2
+							    }, {
+							      "source": 22222,
+							      "target": 33333,
+							      "weight": 4
+							    }, {
+							      "source": 33333,
+							      "target": 11111,
+							      "weight": 2
+							    }]
+							  }
+							};
+			var oGraphModel =  new sap.ui.model.json.JSONModel(sBaseUrl);
+			var oViewModel =  new sap.ui.model.json.JSONModel({
+				graphMeasure: "weight"
+			});
+			fl.setModel(oViewModel);
+			fl.setModel(oGraphModel, "graphModel");
+
+			a = this.getView().byId('idFlexBoxFL');
+			
+			fl.setInteractive(false)
+			// fl.setGraph({path: 'graphModel>/graph'})
+			// fl.setMeasure('{/graphMeasure}')
+			a.addItem(fl);
+		},
+		
+		onNodeSelected: function(oEvent) {
+			var oSelectedNode = oEvent.getParameter("selectedNode");
+			MessageToast.show("You clicked " + oSelectedNode.name);
+		},
+
+		onSwitchMeasure: function(oEvent) {
+			var oButton = oEvent.getSource();
+			var sButtonId = oButton.getId().replace("__xmlview0--","");
+			var oViewModel = this.getView().getModel();
+			switch (sButtonId){
+				case "btnWeight":
+					oViewModel.setProperty("/graphMeasure", "weight");
+					break;
+				case "btnBetweenness":
+					oViewModel.setProperty("/graphMeasure", "betweenness");
+					break;
+				case "btnCloseness":
+					oViewModel.setProperty("/graphMeasure", "closeness");
+					break;
+				case "btnRank":
+					oViewModel.setProperty("/graphMeasure", "rank");
+					break;
+				default:
+					oViewModel.setProperty("/graphMeasure", "weight");
+					break;	
+			}
+		}
 		
 	
 

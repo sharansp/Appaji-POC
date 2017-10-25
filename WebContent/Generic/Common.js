@@ -1,5 +1,7 @@
 jQuery.sap.declare("com.test.Generic.Common");
 jQuery.sap.require("sap.m.MessageBox");
+jQuery.sap.require("com.test.Generic.InteractiveNetwork");
+
 
 
 com.test.Generic.Common= {
@@ -12,9 +14,11 @@ com.test.Generic.Common= {
 			oRouter.navTo("overview");
 		},
 		handleNavButtonPress: function (oSplitApp) {
-			if(!oSplitApp){
+			/*if(!oSplitApp){
 		    	var oSplitApp = this.getView().getParent().getParent();
-		    }
+		    }*/
+		    //commenting above assignment based on condition, since it's giving error
+		    var oSplitApp = this.getView().getParent().getParent();
 			var oMaster = oSplitApp.getMasterPages()[0];
 		    oSplitApp.toMaster(oMaster);
 		},
