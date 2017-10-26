@@ -24,7 +24,7 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 			for(i;i<length;i++){
 				tile=new sap.m.GenericTile({
 					header:modelData[i].name,
-					frameType:"TwoByOne",
+					frameType:"OneByOne",
 					backgroundImage:modelData[i].backgroundImage,
 					press:function(evt){
 						 var src = evt.getSource();
@@ -41,7 +41,7 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 						
 					},
 					tileContent:{
-						unit:"12",
+						unit:"Click Here",
 						//content:oNewsContent
 						
 					}
@@ -75,9 +75,16 @@ sap.ui.controller("com.test.Controller.DivyaShakti", {
 * This hook is the same one that SAPUI5 controls get after being rendered.
 * @memberOf loginapp.App
 */
-//	onAfterRendering: function() {
-//
-//	},
+	onAfterRendering: function(oEvent) {
+		/*var classname = ".sapMTileCntFooterTextColorNeutral sapMTileCntFtrTxt";
+		$(classname).css('color','white');*/
+
+		var idEle = "#__content1-footer-text";
+		for(var i=1; i<=4;i++){
+			$(idEle.replace('1',i)).css('color','white');
+		}
+		
+	},
 
 /**
 * Called when the Controller is destroyed. Use this one to free resources and finalize activities.

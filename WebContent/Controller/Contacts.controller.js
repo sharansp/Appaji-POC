@@ -29,7 +29,6 @@ sap.ui.controller("com.test.Controller.Contacts", {
 	
 	onInit: function() {
 			// Get data:
-			debugger;
 			//com.test.Generic.InteractiveNetwork
 			//idFlexBoxFL
 			fl = new com.test.Generic.InteractiveNetwork();

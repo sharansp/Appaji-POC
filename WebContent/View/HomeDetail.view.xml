@@ -7,6 +7,12 @@
 	 <Page id="idHomeDetailView"  class="page-header" navButtonPress="com.test.Generic.Common.handleNavButtonPress">
 		<!-- design= 'sap.ui.commons.TextViewDesign.H1' width = '70%' -->
 	<content>
+		
+	
+		<core:HTML content="&lt;audio src='C:\Users\spatil1\Desktop\ionic\bk_music.mp3' autoplay='true'  loop='true' &gt;
+			&lt;p&gt;If you are reading this, it is because your browser does not support the audio element.     &lt;/p&gt;
+			&lt;/audio&gt;"/>
+
 		<!-- <marquee>This text will scroll from right to left</marquee> -->
 		<core:HTML content="&lt;marquee onmouseover='this.stop()' onmouseout='this.start()' &gt; ಮುಗಳಖೋಡ - ಜಿಡಾಗ ಮಠ : 2018ರ ಜನೆವರಿ 12,13,14 ರಂದು ನಡಿಯಲ್ಲಿರುವ ಶ್ರೀ ಸಿದ್ಧರಾಮೇಶ್ವರ ಸಂಕಲ್ಪ ಯಾತ್ರೆ &lt;/marquee&gt;"/>
 	<Image
